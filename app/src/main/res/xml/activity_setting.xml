@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditTextPreference android:title="Taxi number"
+        android:key="taxinumb"
+        android:summary="Please provide the Taxi number"></EditTextPreference>
+
+    <PreferenceScreen
+        android:key="white"
+        android:title="@string/item_white1"
+        android:summary="@string/item_white">
+        <intent android:action="android.intent.action.VIEW"
+            android:targetPackage="com.esprit.pim.breathlyzerv1"
+            android:targetClass="com.esprit.pim.breathlyzerv1.WhiteActivity" />
+    </PreferenceScreen>
+
+    <EditTextPreference android:title="Alcohol Threshold"
+        android:key="thres"
+        android:summary="Pair with kit to get your alcohol threshold">
+
+    </EditTextPreference>
+
+</PreferenceScreen>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+
+        <RelativeLayout
+            android:tag="front"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
+            <LinearLayout android:id="@+id/thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dip"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dip">
+                <ImageView
+                    android:src="@drawable/circleduser"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/imageView3"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignBottom="@+id/userNumber"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginLeft="15dp" />
+            </LinearLayout>
+            <TextView android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="name"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:layout_alignTop="@+id/thumbnail"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:layout_marginLeft="35dp"
+                android:layout_marginStart="35dp" />
+            <TextView android:id="@+id/userNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="number"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18dp"
+                android:layout_below="@+id/userName"
+                android:layout_alignLeft="@+id/userName"
+                android:layout_alignStart="@+id/userName" />
+
+
+        </RelativeLayout>
+        <!-- this view reveals when swipe right -->
+    <RelativeLayout
+        android:tag="reveal-left"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="right|top">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/trash"
+            android:visibility="invisible"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>
